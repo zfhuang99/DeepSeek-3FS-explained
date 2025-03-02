@@ -1,6 +1,6 @@
 # DeepSeek-3FS explained in $6.81
 
-DeepSeek has recently open-sourced [3FS](https://github.com/deepseek-ai/3FS), a distributed file system designed for both LLM training (data and checkpointing) and inference (KV cache). The system achieves an impressive 6.6TiB/s across 180 nodes, which translates to approximately 300Gbps per node. The architecture incorporates FoundationDB for cluster metadata, RocksDB for storage node metadata, and CRAQ for consistent replication during concurrent reads. Beyond studying the [design nodes](https://github.com/deepseek-ai/3FS/blob/main/docs/design_notes.md), one can gain a deeper understanding of 3FS by delving into the source code.
+DeepSeek has recently open-sourced [3FS](https://github.com/deepseek-ai/3FS), a distributed file system designed for both LLM training (data and checkpointing) and inference (KV cache). The system achieves an impressive 6.6TiB/s across 180 nodes, which translates to approximately 300Gbps per node. The architecture incorporates FoundationDB for cluster metadata, RocksDB for storage node metadata, and CRAQ for consistent replication during concurrent reads. Beyond studying the [design notes](https://github.com/deepseek-ai/3FS/blob/main/docs/design_notes.md), one can gain a deeper understanding of 3FS by delving into the source code.
 
 ## Technical deep dives:
 * [chunks rebuilt after storage target failure](data_durability.md)
